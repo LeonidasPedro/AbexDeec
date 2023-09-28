@@ -1,7 +1,7 @@
+import userRoutes from "./userRoutes";
 function Routes(app)
+
 {
-    app.get('/', (req, res) => {
-        res.send('Hello World!');
-    });
+    userRoutes(app);
 }
 export default Routes;
