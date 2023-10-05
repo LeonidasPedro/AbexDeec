@@ -1,5 +1,10 @@
-import User from './User';
+import Atividade from './Atividade';
+import Localizacao from './Localisacao';
+import Usuario from './Usuario';
 
 (async () => {
-    User.sync({ force: true });
+
+    Atividade.sync({ force: true });
+    Localizacao.sync({ force: true });
+    Usuario.sync({ force: true });
 })();    
