@@ -7,3 +7,5 @@ export default (app) => {
 	app.get('/base', User.get)
 	app.get('/base/:id', User.get)
 }
+
+
