@@ -4,51 +4,47 @@ import { sequelize } from "../config";
 const Localizacao = sequelize.define(
   'localizacao',
   {
-    id: {
+    cd_localizacao: {
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
-      field: 'id'
+      field: 'cd_localizacao'
     },
-    logradouro: {
+    ds_logradouro: {
       type: DataTypes.STRING,
       allowNull: false,
-      field: 'logradouro'
+      field: 'ds_logradouro'
     },
-    endereco: {
+    nr_endereco: {
+      type: DataTypes.STRING,
+      field: 'nr_endereco'
+    },
+    ds_complemento: {
+      type: DataTypes.STRING,
+      field: 'ds_complemento'
+    },
+    ds_bairro: {
+      type: DataTypes.STRING,
+      field: 'ds_bairro'
+    },
+    ds_cidade: {
       type: DataTypes.STRING,
       allowNull: false,
-      field: 'endereco'
+      field: 'ds_cidade'
     },
-    complemento: {
-      type: DataTypes.STRING,
-      allowNull: true,
-      field: 'complemento'
-    },
-    bairro: {
+    ds_estado: {
       type: DataTypes.STRING,
       allowNull: false,
-      field: 'bairro'
+      field: 'ds_estado'
     },
-    cidade: {
+    ds_pais: {
       type: DataTypes.STRING,
       allowNull: false,
-      field: 'cidade'
+      field: 'ds_pais'
     },
-    estado: {
+    ds_cep: {
       type: DataTypes.STRING,
-      allowNull: false,
-      field: 'estado'
-    },
-    pais: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      field: 'pais'
-    },
-    cep: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      field: 'cep'
+      field: 'ds_cep'
     }
   },
   {

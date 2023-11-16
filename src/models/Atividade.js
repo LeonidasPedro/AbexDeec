@@ -2,36 +2,42 @@ import { DataTypes } from "sequelize";
 import { sequelize } from "../config";
 
 const Atividade = sequelize.define(
-  'atividades',
+  'atividade',
   {
-    id: {
+    cd_atividade: {
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
-      field: 'id'
+      field: 'cd_atividade'
     },
-    materialdeapoio: {
-      type: DataTypes.STRING, 
-      allowNull: true,
-      field: 'materialdeapoio'
+    nm_atividade: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      field: 'nm_atividade'
     },
-    cd_usuario: {
+    ds_atividade: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+      field: 'ds_atividade'
+    },
+    dt_inicio: {
+      type: DataTypes.DATEONLY,
+      field: 'dt_inicio'
+    },
+    dt_fim: {
+      type: DataTypes.DATEONLY,
+      field: 'dt_fim'
+    },
+    qt_horas: {
       type: DataTypes.INTEGER,
-      allowNull: true, 
-      field: 'cd_usuario'
-    },
-    cd_demanda: {
-      type: DataTypes.INTEGER,
-      allowNull: true, // Isso fica falso quando adicionar a relação
-      field: 'cd_demanda'
+      field: 'qt_horas'
     }
+    // Aqui você adicionaria mais campos conforme necessário
   },
   {
     freezeTableName: true,
     timestamps: false
   }
 );
-
-
 
 export default Atividade;

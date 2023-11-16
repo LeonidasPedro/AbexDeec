@@ -1,14 +1,14 @@
 import { DataTypes } from "sequelize";
 import { sequelize } from "../config";
 
-const Certificado = sequelize.define(
-  'certificado',
+const InscricaoDemanda = sequelize.define(
+  'inscricao_demanda',
   {
-    cd_certificado: {
+    cd_inscricao_demanda: {
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
-      field: 'cd_certificado'
+      field: 'cd_inscricao_demanda'
     },
     cd_demanda: {
       type: DataTypes.INTEGER,
@@ -20,14 +20,10 @@ const Certificado = sequelize.define(
       allowNull: false,
       field: 'cd_usuario'
     },
-    hr_geracao: {
+    dt_cadastro: {
       type: DataTypes.DATE,
       allowNull: false,
-      field: 'hr_geracao'
-    },
-    ds_certificado: {
-      type: DataTypes.TEXT,
-      field: 'ds_certificado'
+      field: 'dt_cadastro'
     }
   },
   {
@@ -36,4 +32,4 @@ const Certificado = sequelize.define(
   }
 );
 
-export default Certificado;
+export default InscricaoDemanda;
