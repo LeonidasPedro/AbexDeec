@@ -4,16 +4,16 @@ import { sequelize } from "../config";
 const TipoUsuario = sequelize.define(
   'tipo_usuario',
   {
-    id: {
+    cd_tipo_usuario: {
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
-      field: 'id'
+      field: 'cd_tipo_usuario'
     },
-    descricao: {
+    ds_tipo_usuario: {
       type: DataTypes.STRING,
       allowNull: false,
-      field: 'descricao'
+      field: 'ds_tipo_usuario'
     }
   },
   {
