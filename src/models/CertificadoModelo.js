@@ -4,13 +4,13 @@ import { sequelize } from "../config";
 const CertificadoModelo = sequelize.define(
   'certificado_modelo',
   {
-    cd_modelo: {
+    modeloId: {
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
       field: 'cd_modelo'
     },
-    ds_documento: {
+    documentoDescricao: {
       type: DataTypes.STRING,
       allowNull: false,
       field: 'ds_documento'

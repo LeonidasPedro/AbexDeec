@@ -4,28 +4,28 @@ import { sequelize } from "../config";
 const Certificado = sequelize.define(
   'certificado',
   {
-    cd_certificado: {
+    certificadoId: {
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
       field: 'cd_certificado'
     },
-    cd_demanda: {
+    demandaId: {
       type: DataTypes.INTEGER,
       allowNull: false,
       field: 'cd_demanda'
     },
-    cd_usuario: {
+    usuarioId: {
       type: DataTypes.INTEGER,
       allowNull: false,
       field: 'cd_usuario'
     },
-    hr_geracao: {
+    geracaoHora: {
       type: DataTypes.DATE,
       allowNull: false,
       field: 'hr_geracao'
     },
-    ds_certificado: {
+    certificadoDescricao: {
       type: DataTypes.TEXT,
       field: 'ds_certificado'
     }

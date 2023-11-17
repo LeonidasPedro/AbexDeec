@@ -4,45 +4,45 @@ import { sequelize } from "../config";
 const EntregaAtividade = sequelize.define(
   'entrega_atividade',
   {
-    cd_entrega_atividade: {
+    entregaAtividadeId: {
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
       field: 'cd_entrega_atividade'
     },
-    cd_atividade: {
+    atividadeId: {
       type: DataTypes.INTEGER,
       allowNull: false,
       field: 'cd_atividade'
     },
-    cd_demanda: {
+    demandaId: {
       type: DataTypes.INTEGER,
       allowNull: false,
       field: 'cd_demanda'
     },
-    cd_inscricao_demanda: {
+    inscricaoDemandaId: {
       type: DataTypes.INTEGER,
       allowNull: false,
       field: 'cd_inscricao_demanda'
     },
-    hr_cadastro: {
+    horaCadastro: {
       type: DataTypes.DATE,
       allowNull: false,
       field: 'hr_cadastro'
     },
-    sn_entregue: {
+    atividadeEntregue: {
       type: DataTypes.BOOLEAN,
       field: 'sn_entregue'
     },
-    dt_entrega: {
+    dataEntrega: {
       type: DataTypes.DATEONLY,
       field: 'dt_entrega'
     },
-    sn_entrega_atraso: {
+    entregaAtraso: {
       type: DataTypes.BOOLEAN,
       field: 'sn_entrega_atraso'
     },
-    dc_entrega: {
+    documentoEntrega: {
       type: DataTypes.TEXT,
       field: 'dc_entrega'
     }

@@ -4,62 +4,62 @@ import { sequelize } from "../config";
 const Demanda = sequelize.define(
   'demanda',
   {
-    cd_demanda: {
+    demandaId: {
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
       field: 'cd_demanda'
     },
-    nm_demanda: {
+    demandaNome: {
       type: DataTypes.STRING,
       allowNull: false,
       field: 'nm_demanda'
     },
-    ds_descricao: {
+    demandaDescricao: {
       type: DataTypes.TEXT,
       field: 'ds_descricao'
     },
-    qt_horas: {
+    quantidadeHoras: {
       type: DataTypes.INTEGER,
       field: 'qt_horas'
     },
-    qt_vagas: {
+    quantidadeVagas: {
       type: DataTypes.INTEGER,
       field: 'qt_vagas'
     },
-    dt_inicio: {
+    dataInicio: {
       type: DataTypes.DATEONLY,
       field: 'dt_inicio'
     },
-    dt_fim: {
+    dataFim: {
       type: DataTypes.DATEONLY,
       field: 'dt_fim'
     },
-    sn_finalizada: {
+    finalizada: {
       type: DataTypes.BOOLEAN,
       field: 'sn_finalizada'
     },
-    dt_cadastro: {
+    dataCadastro: {
       type: DataTypes.DATEONLY,
       field: 'dt_cadastro'
     },
-    hr_cadastro: {
+    horaCadastro: {
       type: DataTypes.TIME,
       field: 'hr_cadastro'
     },
-    dt_fim_inscricao: {
+    dataFimInscricao: {
       type: DataTypes.DATEONLY,
       field: 'dt_fim_inscricao'
     },
-    cd_usuario: {
+    usuarioId: {
       type: DataTypes.INTEGER,
       field: 'cd_usuario'
     },
-    cd_imagem: {
+    imagemId: {
       type: DataTypes.INTEGER,
       field: 'cd_imagem'
     },
-    cd_localizacao: {
+    localizacaoId: {
       type: DataTypes.INTEGER,
       field: 'cd_localizacao'
     }
@@ -70,7 +70,6 @@ const Demanda = sequelize.define(
   }
 );
 
-// Outros modelos seriam definidos aqui, similar ao modelo Demanda...
 
 // Relações
 // Demanda.belongsTo(Atividade, { foreignKey: 'cd_atividade' });
