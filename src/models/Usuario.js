@@ -4,39 +4,39 @@ import { sequelize } from "../config";
 const Usuario = sequelize.define(
   'usuarios',
   {
-    cd_usuario: {
+    usuarioId: {
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
       field: 'cd_usuario'
     },
-    nm_usuario: {
+    usuarioName: {
       type: DataTypes.STRING,
       allowNull: false,
       field: 'nm_usuario'
     },
-    nr_cpf: {
+    usuarioCpf: {
       type: DataTypes.STRING,
       field: 'nr_cpf'
     },
-    ds_email: {
+    usuarioEmail: {
       type: DataTypes.STRING,
       allowNull: false,
       field: 'ds_email'
     },
-    nr_telefone: {
+    usuarioTelefone: {
       type: DataTypes.STRING,
       field: 'nr_telefone'
     },
-    sn_ativo: {
+    usuarioAtivo: {
       type: DataTypes.BOOLEAN,
       field: 'sn_ativo'
     },
-    dt_cadastro: {
+    dataCadastro: {
       type: DataTypes.DATEONLY,
       field: 'dt_cadastro'
     },
-    cd_tipo_usuario: {
+    tipoUsuarioId: {
       type: DataTypes.INTEGER,
       allowNull: false,
       field: 'cd_tipo_usuario'

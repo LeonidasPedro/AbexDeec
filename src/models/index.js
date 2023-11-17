@@ -18,4 +18,4 @@ import EntregaAtividade from './EntregaAtividade';
     Demanda.sync({ force: true });
     InscricaoDemanda.sync({ force: true });
     EntregaAtividade.sync({ force: true });
-})();    
+})();  
