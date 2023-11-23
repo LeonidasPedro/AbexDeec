@@ -4,20 +4,20 @@ import Demanda from "../models/Demanda";
 const create = async (req, res) => {
   try {
     // Extrair os dados da demanda do corpo da requisição
-    let { nm_demanda, ds_descricao, qt_horas, qt_vagas, dt_inicio, dt_fim, sn_finalizada, cd_usuario, cd_imagem, cd_localizacao } = req.body;
+    let { demandaNome, demandaDescricao, quantidadeHoras, quantidadeVagas, dataInicio, dataFim, finalizada, usuarioId, imagemId, localizacaoId } = req.body;
 
     // Criar uma nova demanda com os dados recebidos
     let response = await Demanda.create({
-      nm_demanda,
-      ds_descricao,
-      qt_horas,
-      qt_vagas,
-      dt_inicio,
-      dt_fim,
-      sn_finalizada,
-      cd_usuario,
-      cd_imagem,
-      cd_localizacao
+      demandaNome,
+      demandaDescricao,
+      quantidadeHoras,
+      quantidadeVagas,
+      dataInicio,
+      dataFim,
+      finalizada,
+      usuarioId,
+      imagemId,
+      localizacaoId
     });
 
     // Enviar resposta de sucesso
