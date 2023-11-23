@@ -58,14 +58,14 @@ try {
 }
 
 const create = async (dados, res) => {
-let { usuario, cpf, email, telefone, ativo } = dados;
+let { usuarioName, usuarioCpf, usuarioEmail, usuarioTelefone, usuarioAtivo } = dados;
 
 let response = await Usuario.create({
-    usuario,
-    cpf,
-    email,
-    telefone,
-    ativo
+    usuarioName,
+    usuarioCpf,
+    usuarioEmail,
+    usuarioTelefone,
+    usuarioAtivo
 });
 
 return res.status(200).send({
