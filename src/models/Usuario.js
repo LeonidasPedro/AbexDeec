@@ -1,6 +1,7 @@
 import { DataTypes } from "sequelize";
 import { sequelize } from "../config";
-import TipoUsuario from "./TipoUsuario"; // Import the TipoUsuario model
+import TipoUsuario from "./TipoUsuario";
+import Demanda from "./Demanda";
 
 const Usuario = sequelize.define(
   'usuarios',
