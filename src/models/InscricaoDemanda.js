@@ -4,7 +4,7 @@ import { sequelize } from "../config";
 const InscricaoDemanda = sequelize.define(
   'inscricao_demanda',
   {
-   inscricaoDemandaId: {
+   id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,

@@ -4,7 +4,7 @@ import { sequelize } from "../config";
 const Atividade = sequelize.define(
   'atividade',
   {
-    atividadeId: {
+    id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,

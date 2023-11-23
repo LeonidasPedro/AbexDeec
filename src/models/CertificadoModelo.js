@@ -4,7 +4,7 @@ import { sequelize } from "../config";
 const CertificadoModelo = sequelize.define(
   'certificado_modelo',
   {
-    modeloId: {
+    id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,

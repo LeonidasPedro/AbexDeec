@@ -4,7 +4,7 @@ import { sequelize } from "../config";
 const TipoUsuario = sequelize.define(
   'tipo_usuario',
   {
-    tipoUsuarioId: {
+    id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,

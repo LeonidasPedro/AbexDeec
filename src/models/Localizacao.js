@@ -4,7 +4,7 @@ import { sequelize } from "../config";
 const Localizacao = sequelize.define(
   'localizacao',
   {
-    localizacaoId: {
+    id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,

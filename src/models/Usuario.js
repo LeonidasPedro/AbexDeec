@@ -4,7 +4,7 @@ import { sequelize } from "../config";
 const Usuario = sequelize.define(
   'usuarios',
   {
-    usuarioId: {
+    id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
