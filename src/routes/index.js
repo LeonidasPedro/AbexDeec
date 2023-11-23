@@ -1,15 +1,14 @@
-
-import userRoute from "./userRoute";
 import localizacaoRoute from "./localizacaoRoute";
 import certificadoRoute from "./certificadoRoute";
 import atividadeRoute from "./atividadeRoute";
 import demandaRoute from "./demandaRoute";
+import usuarioRoute from "./usuarioRoute";
 
 
 function Routes(app)
 
 {
-    userRoute(app);
+    usuarioRoute(app);
     localizacaoRoute(app);
     certificadoRoute(app);
     atividadeRoute(app);

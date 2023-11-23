@@ -1,4 +1,4 @@
-import User from "../controllers/userController"
+import User from "../controllers/usuarioController"
 
 export default (app) => {
 	app.post('/users/persist', User.persist)
