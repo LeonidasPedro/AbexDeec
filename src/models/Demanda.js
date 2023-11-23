@@ -1,5 +1,6 @@
 import { DataTypes } from "sequelize";
 import { sequelize } from "../config";
+import Usuario from "./Usuario";
 
 const Demanda = sequelize.define(
   'demanda',
@@ -70,27 +71,6 @@ const Demanda = sequelize.define(
   }
 );
 
-
-// Relações
-// Demanda.belongsTo(Atividade, { foreignKey: 'cd_atividade' });
-// Atividade.hasMany(Demanda, { foreignKey: 'cd_atividade' });
-
-// Demanda.belongsTo(Localizacao, { foreignKey: 'cd_localizacao' });
-// Localizacao.hasMany(Demanda, { foreignKey: 'cd_localizacao' });
-
-// // Se a relação com Usuario for One-to-One
-// Usuario.hasOne(Demanda, { foreignKey: 'cd_usuario' });
-// Demanda.belongsTo(Usuario, { foreignKey: 'cd_usuario' });
-
-// // Se a relação com Usuario for One-to-Many
-// Usuario.hasMany(Demanda, { foreignKey: 'cd_usuario' });
-// Demanda.belongsTo(Usuario, { foreignKey: 'cd_usuario' });
-
-// // Se houver uma relação Many-to-Many entre Usuario e Demanda
-// Usuario.belongsToMany(Demanda, { through: 'InscricaoDemanda' });
-// Demanda.belongsToMany(Usuario, { through: 'InscricaoDemanda' });
-
-// // E assim por diante para outras relações...
-
+Demanda.belongsTo(Usuario, { foreignKey: 'usuarioId' });
 
 export default Demanda;

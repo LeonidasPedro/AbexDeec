@@ -1,5 +1,7 @@
 import { DataTypes } from "sequelize";
 import { sequelize } from "../config";
+import Usuario from "./Usuario"; 
+import Demanda from "./Demanda"; 
 
 const Certificado = sequelize.define(
   'certificado',
@@ -35,5 +37,8 @@ const Certificado = sequelize.define(
     timestamps: false
   }
 );
+
+Certificado.belongsTo(Demanda, { foreignKey: 'demandaId' });
+Certificado.belongsTo(Usuario, { foreignKey: 'usuarioId' });
 
 export default Certificado;
