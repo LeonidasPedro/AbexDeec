@@ -1,5 +1,6 @@
 import { DataTypes } from "sequelize";
 import { sequelize } from "../config";
+import TipoUsuario from "./TipoUsuario"; // Import the TipoUsuario model
 
 const Usuario = sequelize.define(
   'usuarios',
@@ -9,6 +10,11 @@ const Usuario = sequelize.define(
       primaryKey: true,
       autoIncrement: true,
       field: 'cd_usuario'
+    },
+    usuarioName: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      field: 'nm_usuario'
     },
     usuarioName: {
       type: DataTypes.STRING,
@@ -47,5 +53,7 @@ const Usuario = sequelize.define(
     timestamps: false
   }
 );
+
+Usuario.belongsTo(TipoUsuario, { foreignKey: 'tipoUsuarioId' });
 
 export default Usuario;

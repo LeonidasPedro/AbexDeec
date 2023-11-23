@@ -1,5 +1,6 @@
 import { DataTypes } from "sequelize";
 import { sequelize } from "../config";
+import Usuario from "./Usuario";
 
 const TipoUsuario = sequelize.define(
   'tipo_usuario',
@@ -21,5 +22,7 @@ const TipoUsuario = sequelize.define(
     timestamps: false
   }
 );
+
+TipoUsuario.hasMany(Usuario, { foreignKey: 'tipoUsuarioId' });
 
 export default TipoUsuario;
