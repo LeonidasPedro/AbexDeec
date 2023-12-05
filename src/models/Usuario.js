@@ -55,6 +55,6 @@ const Usuario = sequelize.define(
   }
 );
 
-Usuario.belongsTo(TipoUsuario, { foreignKey: 'tipoUsuarioId' });
+//Usuario.belongsTo(TipoUsuario, { foreignKey: 'tipoUsuarioId' });
 
 export default Usuario;

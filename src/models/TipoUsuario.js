@@ -23,6 +23,6 @@ const TipoUsuario = sequelize.define(
   }
 );
 
-TipoUsuario.hasMany(Usuario, { foreignKey: 'tipoUsuarioId' });
+//TipoUsuario.hasMany(Usuario, { foreignKey: 'tipoUsuarioId' });
 
 export default TipoUsuario;

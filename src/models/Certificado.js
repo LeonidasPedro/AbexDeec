@@ -38,7 +38,7 @@ const Certificado = sequelize.define(
   }
 );
 
-Certificado.belongsTo(Demanda, { foreignKey: 'demandaId' });
-Certificado.belongsTo(Usuario, { foreignKey: 'usuarioId' });
+//Certificado.belongsTo(Demanda, { foreignKey: 'demandaId' });
+//Certificado.belongsTo(Usuario, { foreignKey: 'usuarioId' });
 
 export default Certificado;

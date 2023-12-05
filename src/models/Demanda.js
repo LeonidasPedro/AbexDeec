@@ -71,6 +71,6 @@ const Demanda = sequelize.define(
   }
 );
 
-Demanda.belongsTo(Usuario, { foreignKey: 'usuarioId' });
+//Demanda.belongsTo(Usuario, { foreignKey: 'usuarioId' });
 
 export default Demanda;
