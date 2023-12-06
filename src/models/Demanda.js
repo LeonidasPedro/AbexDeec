@@ -56,9 +56,14 @@ const Demanda = sequelize.define(
       type: DataTypes.INTEGER,
       field: 'cd_usuario'
     },
-    imagemId: {
-      type: DataTypes.INTEGER,
-      field: 'cd_imagem'
+    // caso o projeto vá pra frente a gente faz um sistema de upload de imagens, por hora deixo um campo pra um link da web
+    // imagemId: {
+    //   type: DataTypes.INTEGER,
+    //   field: 'cd_imagem'
+    // },
+    imagemLink: {
+      type: DataTypes.STRING,
+      field: 'ds_link_imagem'
     },
     localizacaoId: {
       type: DataTypes.INTEGER,
