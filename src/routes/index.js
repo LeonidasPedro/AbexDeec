@@ -4,11 +4,13 @@ import atividadeRoute from "./atividadeRoute";
 import demandaRoute from "./demandaRoute";
 import usuarioRoute from "./usuarioRoute";
 import tipoUsuarioRoute from "./tipoUsuarioRoute";
+import inscricaoDemandaRoute from "./inscricaoDemandaRoute";
 
 
 function Routes(app)
 
 {
+    inscricaoDemandaRoute(app);
     usuarioRoute(app);
     localizacaoRoute(app);
     certificadoRoute(app);
